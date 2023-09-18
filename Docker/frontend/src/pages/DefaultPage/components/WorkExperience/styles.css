@@ -1,0 +1,48 @@
+.default-page .work-experience {
+
+}
+.default-page .work-experience .p-accordion-header-text {
+	width: 100%;
+}
+.default-page .work-experience .accordion-header {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.default-page .work-experience .accordion-header .section {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.default-page .work-experience .accordion-header .section #place {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.default-page .work-experience .accordion-header .section p {
+	font-weight: 600;
+}
+
+.default-page .work-experience .content {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.default-page .work-experience .content #title {
+	font-size: 17px;
+	font-weight: 600;
+}
+
+.default-page .work-experience .content .same-line {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+	padding: 8px 0;
+}

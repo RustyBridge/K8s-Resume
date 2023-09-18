@@ -1,0 +1,38 @@
+.default-page .header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: left;
+	/*width: 50%;*/
+	padding: 24px;
+	gap: 24px;
+}
+
+.default-page .header .divider {
+	display: flex;
+	min-height: 50%;
+	width: 1px;
+	background-color: rgba(164, 164, 164, 0.66);
+}
+
+.default-page .header .communication {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	gap: 12px;
+
+}
+
+.default-page .header .websites {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	gap: 12px;
+}
+
+.default-page .header .websites #made-by {
+	font-size: 12px;
+}

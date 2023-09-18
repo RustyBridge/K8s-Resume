@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resume-frontend
+  labels:
+    app: resume-frontend
+spec:
+  template:
+    metadata:
+      name: resume-frontend
+      labels:
+        app: resume-frontend
+    spec:
+      containers:
+      - name: resume-frontend
+        image: rustybridge/resume-frontend:1.4
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+          name: listen
+  selector:
+    matchLabels:
+      app: resume-frontend
+  replicas: 2

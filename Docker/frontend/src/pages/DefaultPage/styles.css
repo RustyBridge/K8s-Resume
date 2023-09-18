@@ -1,0 +1,33 @@
+.default-page {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100vh;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 24px;
+	padding: 24px;
+
+	background-image:
+		/*linear-gradient(*/
+		/*		rgba(0,0,0,0.61),*/
+		/*		rgba(0,0,0,0.61)*/
+		/*),*/
+		url(/src/assets/background.svg);
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+
+}
+
+.default-page .p-tabview {
+	width: 80%;
+}
+
+.default-page .p-tabview-nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+}

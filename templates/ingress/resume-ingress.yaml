@@ -1,0 +1,40 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: resume-ingress
+  namespace: resume
+  annotations:
+    ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/cors-allow-origin: "https://cv.gvasilopoulos.xyz"
+    nginx.ingress.kubernetes.io/cors-allow-methods: "GET"
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - cv.gvasilopoulos.xyz
+    secretName: cv-gvasilopoulos-xyz-tls
+  - hosts:
+    - rapi.gvasilopoulos.xyz
+    secretName: rapi-gvasilopoulos-xyz-tls
+  rules:
+  - host: cv.gvasilopoulos.xyz
+    http:
+      paths:
+        - pathType: Prefix
+          path: /
+          backend:
+            service:
+              name: resume-frontend-svc
+              port: 
+                number: 80
+  - host: rapi.gvasilopoulos.xyz
+    http:
+      paths:
+        - pathType: Prefix
+          path: /
+          backend:
+            service:
+              name: resume-backend-svc
+              port:
+                 number: 8000
